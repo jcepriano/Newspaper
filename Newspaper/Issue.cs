@@ -10,6 +10,6 @@ namespace Newspaper
     {
         public int Id { get; set; }
         public DateTime Date { get; set; }
-        public Article Article { get; set; }
+        public List<Article> Articles { get; set; } = new List<Article>();
     }
 }

@@ -19,12 +19,12 @@ namespace Newspaper.Tests
             {
                 Id = id,
                 Date = date,
-                Article = article
+                Articles = new List<Article> { article }
             };
 
             Assert.Equal(id, issue.Id);
             Assert.Equal(date, issue.Date);
-            Assert.Equal(article, issue.Article);
+            Assert.Equal(new List<Article> { article }, issue.Articles);
         }
     }
 }

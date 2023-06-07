@@ -17,13 +17,13 @@ namespace NewspaperTests
                 Id = id,
                 Name = name,
                 Speciality = speciality,
-                Articles = article
+                Articles = new List<Article> { article }
             };
 
             Assert.Equal(id, reporter.Id);
             Assert.Equal(name, reporter.Name);
             Assert.Equal(speciality, reporter.Speciality);
-            Assert.Equal(article, reporter.Articles);
+            Assert.Equal(new List<Article> { article }, reporter.Articles);
         }
     }
 }
